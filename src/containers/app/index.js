@@ -1,9 +1,5 @@
 import React from "react";
-import {
-    HashRouter as Router,
-    Route,
-    NavLink
-} from "react-router-dom"
+import {HashRouter as Router, Route, NavLink} from "react-router-dom"
 import "./index.less"
 import Home from "../Home/index";
 import Courses from "../Courses/index";
