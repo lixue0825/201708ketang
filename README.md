@@ -45,3 +45,9 @@ https://reactcommunity.org/react-transition-group/
 react-transition-group
 
 ```
+#轮播图组件
+https://github.com/voronianski/react-swipe
+```
+npm install react swipe-js-iso react-swipe
+
+```
