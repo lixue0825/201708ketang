@@ -13,11 +13,15 @@ export default class HomeHeader extends React.Component{
             timeout={500}
             classNames="fade"
         >
-        <ul className="menu-list">
-            <li>node课程培训</li>
-            <li>html培训课程</li>
-            <li>视频课程</li>
-            <li>文档课件</li>
+        <ul className="menu-list"
+            onClick={event=>{
+                this.props.setLesson(event.target.dataset.id);
+                this.setState({isShow:false})
+            }}>
+            <li className={this.props.lesson=="1"?"active":""} data-id="1">node课程培训</li>
+            <li className={this.props.lesson=="2"?"active":""} data-id="2">html培训课程</li>
+            <li className={this.props.lesson=="3"?"active":""} data-id="3">视频课程</li>
+            <li className={this.props.lesson=="4"?"active":""} data-id="4">文档课件</li>
         </ul>
         </CSSTransition>
     )

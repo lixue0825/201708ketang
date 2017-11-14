@@ -1,11 +1,21 @@
 import React from "react";
 import HomeHeader from "./HomeHeader/index";
-export default class Home extends React.Component{
+import {connect} from "react-redux"
+import actions from "../../store/actions/home"
+class Home extends React.Component{
     render(){
         return(
             <div className="home">
-                <HomeHeader/>
+               {/*setLesson在actions里的方法；lesson是初始状态，它是从下面的connect第一个参数（函数）传递进来的*/}
+                <HomeHeader
+                    setLesson={this.props.setLesson}
+                    lesson={this.props.lesson}/>
             </div>
         )
     }
 }
+//actions是action的创建器
+export default connect(
+    state=>state.home,//{lesson:0}
+    actions
+)(Home)
