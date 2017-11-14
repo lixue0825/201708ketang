@@ -37,3 +37,11 @@ UI组件：只提供UI
 木偶组件：别的组件让它显示就显示
 
 一个目录对应一个组件：组件中目录里有`index.js`文件和`index.less`样式文件
+
+##动画(使用react-transition-group动画库)
+https://reactcommunity.org/react-transition-group/
+
+```
+react-transition-group
+
+```
