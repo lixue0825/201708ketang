@@ -4,7 +4,8 @@
   "description": "```\r npm init -y\r ```",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build":"webpack",
+    "dev":"webpack-dev-server --open"
   },
   "keywords": [],
   "author": "",
