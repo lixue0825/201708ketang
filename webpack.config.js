@@ -4,7 +4,7 @@ module.exports={
     entry:"./src/index.js",//入口文件
     output:{
         path:path.resolve("build"),//输出的目录
-        filename: "bundle,js",//输出的文件名
+        filename: "bundle.js",//输出的文件名
     },
     module:{
         //存放很多模块加载规则
