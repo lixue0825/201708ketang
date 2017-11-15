@@ -56,3 +56,6 @@ https://github.com/voronianski/react-swipe
 npm install react swipe-js-iso react-swipe
 
 ```
+##如何使用redux
+1.后台写一个后台接口 /sliders
+2.

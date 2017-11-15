@@ -1,24 +1,22 @@
-.tab{
+.tabs{
   position: fixed;
   bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 53px;
-  display: flex;
+  width:100%;
+  height:53px;
+  display:flex;
   flex-direction: row;
-  border-top: 1px solid gainsboro;
+  background-color: #FFF;
+  border-top:1px solid #d5d5d5;
   a{
-    flex: 1;//1 代表每个组件平分空间
-    display: flex;
+    flex:1;
+    display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #555;
+    color:#b5b5b6;
     i{
       font-size: 22px;
     }
-    &.active{
-      color: #198ae4;
-    }
+    &.active{}
   }
 }

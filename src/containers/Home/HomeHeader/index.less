@@ -1,50 +1,48 @@
 .home-header{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  width:100%;
   background-color: #2a2a2a;
+  position: fixed;
+  top:0;
+  left:0;
   .home-logo{
-    height: 56px;
-    display: flex;
-    //两点对齐
+    height:56px;
+    display:flex;
     justify-content: space-between;
-    //垂直居中
     align-items: center;
     img{
-      width: 107px;
-      height: 37px;
-      margin-left: 8px;
+      height: 36px;
+      width:107px;
+      margin-left:9px;
     }
     div{
-      margin-right: 10px;
-    i{
-      color: white;
-    }
+      margin-right:10px;
+      i{
+        color:#FFF;
+      }
     }
   }
   .menu-list{
     position: absolute;
-    left: 0;
-    top: 56px;
-    width: 100%;
+    top:56px;
+    left:0;
+    width:100%;
+    padding:0 10px;
     background-color: #2a2a2a;
-    padding: 0 10px;
     box-sizing: border-box;
     li{
-      height: 45px;
+      height:45px;
       line-height: 45px;
-      color: white;
+      color:#FFF;
       text-align: center;
-      border-top:1px solid #464646;
+      border-top:2px solid #464646;
       &.active{
-        color: green;
+        color:#3dac7b;
       }
     }
   }
 }
 .fade-enter{
-  opacity: .1;
+  opacity: 0;
 }
 .fade-enter.fade-enter-active{
   opacity: 1;
