@@ -26,7 +26,13 @@ app.get('/sliders',function(req,res){
 //获取课程列表
 
 app.get("/lessons",function (req,res) {
-    res.json(lessons)
+  let cloneLessons=JSON.parse(JSON.stringify(lessons))
+    let {offset=0,limit=5}=req.query
+    for(let i=0;i<cloneLessons.list.length;i++){
+    let lesson=cloneLessons.list[i]
+        lesson.title=`${+offset+i+1}-${lesson.title}`
+    }
+    res.json(cloneLessons)
 })
 
 app.listen(3000);

@@ -7,6 +7,8 @@ let initState = {
       loading:"",//加载状态，默认是加载中
       hasMore:true,//后面是否有更多
       list:[],//存放的课程的数组
+      offset:0,//偏移量
+      limit:5 //每页的条数
   }
 }
 export default function(state=initState,action){
@@ -38,7 +40,9 @@ export default function(state=initState,action){
                 loading:"",
                 hasMore:action.payload.hasMore,
                 //课程列表是不停的累加的，要取到元数组，然后和新数组合并
-                list:[...state.lessons.list,...action.payload.list]
+                list:[...state.lessons.list,...action.payload.list],
+                offset:state.lessons.offset+action.payload.list.length,
+                limit:action.payload.offset
             }
         }
     default:
