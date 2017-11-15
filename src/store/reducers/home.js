@@ -42,7 +42,6 @@ export default function(state=initState,action){
                 //课程列表是不停的累加的，要取到元数组，然后和新数组合并
                 list:[...state.lessons.list,...action.payload.list],
                 offset:state.lessons.offset+action.payload.list.length,
-                limit:action.payload.offset
             }
         }
     default:

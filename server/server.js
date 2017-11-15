@@ -24,13 +24,16 @@ app.get('/sliders',function(req,res){
   res.json(sliders);
 });
 //获取课程列表
-
 app.get("/lessons",function (req,res) {
   let cloneLessons=JSON.parse(JSON.stringify(lessons))
     let {offset=0,limit=5}=req.query
     for(let i=0;i<cloneLessons.list.length;i++){
     let lesson=cloneLessons.list[i]
         lesson.title=`${+offset+i+1}-${lesson.title}`
+    }
+
+    if(offset==10){
+      cloneLessons.hasMore=false
     }
     res.json(cloneLessons)
 })
