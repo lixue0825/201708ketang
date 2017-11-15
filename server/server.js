@@ -1,6 +1,7 @@
 let express = require('express');
 let app = express();
 let sliders = require('./mock/slider');
+let lessons=require("./mock/lessons")
 app.use(function(req,res,next){
   //允许的来源
   res.header('Access-Control-Allow-Origin','http://localhost:8080');
@@ -18,7 +19,15 @@ app.use(function(req,res,next){
   }
 });
 //当客户端以get方式访问/sliders请求的时候，会由此路由进行响应
+//获取轮播图
 app.get('/sliders',function(req,res){
   res.json(sliders);
 });
+//获取课程列表
+
+app.get("/lessons",function (req,res) {
+    res.json(lessons)
+})
+
 app.listen(3000);
+

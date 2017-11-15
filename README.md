@@ -58,4 +58,7 @@ npm install react swipe-js-iso react-swipe
 ```
 ##如何使用redux
 1.后台写一个后台接口 /sliders
-2.
+2.前台（api）里写一个获取接口数据的方法
+3.在`actions`里添加一个方法，并调用
+4.在`action-types`里添加新的actiontype类型
+5.在reducer里修改状态,并添加一个case
